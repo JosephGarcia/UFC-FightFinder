@@ -1,0 +1,6 @@
+framework module Pods_UFC_FightFinder {
+  umbrella header "Pods-UFC-FightFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
