@@ -82,10 +82,19 @@ class Event {
         return _location
     }
     
-    init(name: String, eventId: Int) {
+    init(name: String, eventId: Int, headliner: String , url: String?) {
         self._name = name
         self._eventId = eventId
-        
+        self._headliner = headliner
+        self._eventImage = url
+    }
+    
+    func grabUfcEvents(completed: DownloadComplete) {
+        let url = NSURL(string: UFC_EVENTS_URL)!
+        Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+            print(response)
+            completed()
+        }
     }
     
 }
