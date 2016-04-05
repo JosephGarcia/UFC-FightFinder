@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5FDEAB1FF7FD0B4663CE35A7 /* Pods_UFC_FightFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFD4CE9B64DB896CB0BAFB3 /* Pods_UFC_FightFinder.framework */; };
+		8C02CCDF1CB3AA970054DD42 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02CCDE1CB3AA970054DD42 /* EventCell.swift */; };
+		8C02CCE11CB3BF060054DD42 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02CCE01CB3BF060054DD42 /* constants.swift */; };
 		8C050A051CB32EB000BF88CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C050A041CB32EB000BF88CF /* AppDelegate.swift */; };
 		8C050A071CB32EB000BF88CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C050A061CB32EB000BF88CF /* ViewController.swift */; };
 		8C050A0A1CB32EB000BF88CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C050A081CB32EB000BF88CF /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		5CFD4CE9B64DB896CB0BAFB3 /* Pods_UFC_FightFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFC_FightFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EA4F4CCCC54E2B1493D000 /* Pods-UFC-FightFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFC-FightFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UFC-FightFinder/Pods-UFC-FightFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		8C02CCDE1CB3AA970054DD42 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		8C02CCE01CB3BF060054DD42 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		8C050A011CB32EB000BF88CF /* UFC-FightFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UFC-FightFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C050A041CB32EB000BF88CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C050A061CB32EB000BF88CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +84,6 @@
 		8C050A031CB32EB000BF88CF /* UFC-FightFinder */ = {
 			isa = PBXGroup;
 			children = (
-				8C050A261CB3346300BF88CF /* Constants */,
 				8C050A1D1CB333BC00BF88CF /* Controller */,
 				8C050A1C1CB333B600BF88CF /* View */,
 				8C050A1B1CB333B200BF88CF /* Model */,
@@ -99,6 +102,7 @@
 		8C050A191CB333A300BF88CF /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				8C02CCE01CB3BF060054DD42 /* constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -124,6 +128,7 @@
 		8C050A1C1CB333B600BF88CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8C02CCDE1CB3AA970054DD42 /* EventCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -134,13 +139,6 @@
 				8C050A061CB32EB000BF88CF /* ViewController.swift */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		8C050A261CB3346300BF88CF /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Constants;
 			sourceTree = "<group>";
 		};
 		CE7CD9618CBD1AC1C933F285 /* Frameworks */ = {
@@ -277,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C02CCDF1CB3AA970054DD42 /* EventCell.swift in Sources */,
 				8C050A0D1CB32EB000BF88CF /* UFC_FightFinder.xcdatamodeld in Sources */,
 				8C050A071CB32EB000BF88CF /* ViewController.swift in Sources */,
+				8C02CCE11CB3BF060054DD42 /* constants.swift in Sources */,
 				8C050A051CB32EB000BF88CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

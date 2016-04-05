@@ -11,8 +11,8 @@
         <mutableArray key="NotoSans-BoldItalic.ttf">
             <string>NotoSans-BoldItalic</string>
         </mutableArray>
-        <mutableArray key="NotoSans-Italic.ttf">
-            <string>NotoSans-Italic</string>
+        <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -50,54 +50,89 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ucN-7d-aRE">
-                                <rect key="frame" x="0.0" y="51" width="600" height="549"/>
+                                <rect key="frame" x="20" y="77" width="560" height="503"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PLN-ZO-H2h">
-                                    <size key="itemSize" width="402" height="179"/>
+                                    <size key="itemSize" width="454" height="230"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="Uea-ph-o2n">
-                                        <rect key="frame" x="99" y="0.0" width="402" height="179"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="Uea-ph-o2n" customClass="EventCell" customModule="UFC_FightFinder" customModuleProvider="target">
+                                        <rect key="frame" x="53" y="0.0" width="454" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="402" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="454" height="230"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-R2-zfU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="402" height="108"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Macdonald vs Thompson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKz-h6-kNh">
-                                                    <rect key="frame" x="0.0" y="142" width="402" height="37"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Macdonald vs Thompson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKz-h6-kNh">
+                                                    <rect key="frame" x="0.0" y="193" width="454" height="37"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="k8s-Xx-lhp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                     <color key="textColor" red="0.82745098039215681" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UFC Fight Night: Ontario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4E-c9-hJt">
-                                                    <rect key="frame" x="0.0" y="106" width="402" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UFC Fight Night: Ontario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4E-c9-hJt">
+                                                    <rect key="frame" x="0.0" y="157" width="454" height="36"/>
                                                     <color key="backgroundColor" red="0.82745098039215681" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="454" id="6px-3H-ewC"/>
+                                                        <constraint firstAttribute="height" constant="36" id="eK8-mk-FXU"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="19"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fightnight" translatesAutoresizingMaskIntoConstraints="NO" id="DTX-gr-Tu7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="454" height="157"/>
+                                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="DTX-gr-Tu7" firstAttribute="leading" secondItem="Uea-ph-o2n" secondAttribute="leading" id="5Ac-bW-h5O"/>
+                                            <constraint firstItem="SKz-h6-kNh" firstAttribute="top" secondItem="b4E-c9-hJt" secondAttribute="bottom" id="ATX-sh-Y7H"/>
+                                            <constraint firstAttribute="trailing" secondItem="b4E-c9-hJt" secondAttribute="trailing" id="GaU-zu-Bha"/>
+                                            <constraint firstAttribute="trailing" secondItem="DTX-gr-Tu7" secondAttribute="trailing" id="Up6-OH-Ex7"/>
+                                            <constraint firstItem="b4E-c9-hJt" firstAttribute="top" secondItem="DTX-gr-Tu7" secondAttribute="bottom" id="UrR-kx-H66"/>
+                                            <constraint firstItem="b4E-c9-hJt" firstAttribute="leading" secondItem="Uea-ph-o2n" secondAttribute="leading" id="WVx-cf-B1E"/>
+                                            <constraint firstItem="b4E-c9-hJt" firstAttribute="leading" secondItem="Uea-ph-o2n" secondAttribute="leading" id="Zvh-9L-oHk"/>
+                                            <constraint firstItem="DTX-gr-Tu7" firstAttribute="top" secondItem="Uea-ph-o2n" secondAttribute="top" id="blC-WD-PeH"/>
+                                            <constraint firstItem="SKz-h6-kNh" firstAttribute="leading" secondItem="Uea-ph-o2n" secondAttribute="leading" id="cPv-qn-TnP"/>
+                                            <constraint firstAttribute="bottom" secondItem="SKz-h6-kNh" secondAttribute="bottom" id="e0S-W0-Hyt"/>
+                                            <constraint firstItem="b4E-c9-hJt" firstAttribute="top" secondItem="Uea-ph-o2n" secondAttribute="top" constant="157" id="fqp-d2-hXc"/>
+                                            <constraint firstAttribute="trailing" secondItem="b4E-c9-hJt" secondAttribute="trailing" id="mae-H6-v9z"/>
+                                            <constraint firstItem="SKz-h6-kNh" firstAttribute="top" secondItem="b4E-c9-hJt" secondAttribute="bottom" id="oDp-En-upA"/>
+                                            <constraint firstItem="SKz-h6-kNh" firstAttribute="top" secondItem="b4E-c9-hJt" secondAttribute="bottom" id="oDw-15-274"/>
+                                            <constraint firstItem="b4E-c9-hJt" firstAttribute="top" secondItem="DTX-gr-Tu7" secondAttribute="bottom" id="xcd-rl-QjS"/>
+                                            <constraint firstAttribute="trailing" secondItem="SKz-h6-kNh" secondAttribute="trailing" id="xxb-C5-jEM"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Zvh-9L-oHk"/>
+                                                <exclude reference="fqp-d2-hXc"/>
+                                                <exclude reference="mae-H6-v9z"/>
+                                                <exclude reference="oDp-En-upA"/>
+                                                <exclude reference="oDw-15-274"/>
+                                            </mask>
+                                        </variation>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ucN-7d-aRE" secondAttribute="bottom" id="BW7-SR-n3T"/>
-                            <constraint firstAttribute="trailing" secondItem="ucN-7d-aRE" secondAttribute="trailing" id="Svw-g6-Wrl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ucN-7d-aRE" secondAttribute="bottom" constant="20" id="BW7-SR-n3T"/>
+                            <constraint firstAttribute="trailing" secondItem="ucN-7d-aRE" secondAttribute="trailing" constant="20" id="Svw-g6-Wrl"/>
                             <constraint firstAttribute="trailing" secondItem="EJb-Pi-Yzq" secondAttribute="trailing" id="WYE-N6-KaF"/>
-                            <constraint firstItem="ucN-7d-aRE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ywf-QL-5zd"/>
-                            <constraint firstItem="ucN-7d-aRE" firstAttribute="top" secondItem="EJb-Pi-Yzq" secondAttribute="bottom" id="gOp-Q2-kdL"/>
+                            <constraint firstItem="ucN-7d-aRE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ywf-QL-5zd"/>
+                            <constraint firstItem="ucN-7d-aRE" firstAttribute="top" secondItem="EJb-Pi-Yzq" secondAttribute="bottom" constant="26" id="dbE-gr-wsW"/>
                             <constraint firstItem="EJb-Pi-Yzq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rvn-yQ-cIt"/>
                             <constraint firstItem="EJb-Pi-Yzq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yH5-BA-uuy"/>
                         </constraints>
@@ -111,4 +146,7 @@
             <point key="canvasLocation" x="552" y="531"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fightnight" width="337" height="363"/>
+    </resources>
 </document>
