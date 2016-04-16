@@ -38,6 +38,8 @@ class EventCell: UICollectionViewCell {
             let data = NSData(contentsOfURL: posterUrl!)
             eventImg.contentMode = .ScaleAspectFit
             eventImg.image = UIImage(data: (data!))
+        } else {
+            eventImg.image = UIImage(named: "fightnight")
         }
     }
 }

@@ -38,24 +38,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let events = result.value as? [Dictionary<String,AnyObject>] {
                 for event in events {
                     let actualDate = event["event_date"] as! String
-                    let fightDate = actualDate.toDate(DateFormat.ISO8601) as NSDate!
-                    print(fightDate)
-                    // NEED TO EXTRACT CITY NAME AND APPEND TO FIGHT NIGHT
-                    let location = String(event["location"]!) //  "Miami, Florida"
-                    let cityState = location.componentsSeparatedByString(",") // ["Miami", "Florida"]
-                    let city = cityState[0]
-                    var eventName = String(event["base_title"]!)
-                    
-                    if eventName == "UFC Fight Night" && city != "" {
-                        eventName = "UFC Fight Night: \(city)"
+                    var fightDate = actualDate.toDate(DateFormat.ISO8601) as NSDate!
+                    // IF FIGHT IS TODAY OR UPCOMING!
+                    if fightDate >= NSDate.yesterday() {
+                        // NEED TO EXTRACT CITY NAME AND APPEND TO FIGHT NIGHT
+                        let location = String(event["location"]!) //  "Miami, Florida"
+                        let cityState = location.componentsSeparatedByString(",") // ["Miami", "Florida"]
+                        let city = cityState[0]
+                        var eventName = String(event["base_title"]!)
+                        
+                        if eventName == "UFC Fight Night" && city != "" {
+                            eventName = "UFC Fight Night: \(city)"
+                        }
+                        
+                        let imageUrl = String(event["feature_image"]!)
+                        let eventId = event["id"]!.integerValue
+                        let headliner = String(event["title_tag_line"]!)
+                        
+                        let ufcEvent = Event(name: eventName, eventId: eventId, headliner: headliner, url: imageUrl)
+                        self.storeEvents(ufcEvent)
                     }
-                    
-                    let imageUrl = String(event["feature_image"]!)
-                    let eventId = event["id"]!.integerValue
-                    let headliner = String(event["title_tag_line"]!)
-                    
-                    let ufcEvent = Event(name: eventName, eventId: eventId, headliner: headliner, url: imageUrl)
-                    self.storeEvents(ufcEvent)
                 }
             }
         }
