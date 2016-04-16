@@ -21,6 +21,8 @@
 		8C050A231CB3345900BF88CF /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C050A1F1CB3345900BF88CF /* NotoSans-BoldItalic.ttf */; };
 		8C050A241CB3345900BF88CF /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C050A201CB3345900BF88CF /* NotoSans-Italic.ttf */; };
 		8C050A251CB3345900BF88CF /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C050A211CB3345900BF88CF /* NotoSans-Regular.ttf */; };
+		8C8CC4C01CC22620008AA3F7 /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CC4BF1CC22620008AA3F7 /* EventDetailsVC.swift */; };
+		8C8CC4C21CC23818008AA3F7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CC4C11CC23818008AA3F7 /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		8C050A1F1CB3345900BF88CF /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8C050A201CB3345900BF88CF /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		8C050A211CB3345900BF88CF /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		8C8CC4BF1CC22620008AA3F7 /* EventDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
+		8C8CC4C11CC23818008AA3F7 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		AC6F16E579A21FF229A80959 /* Pods-UFC-FightFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFC-FightFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-UFC-FightFinder/Pods-UFC-FightFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				8C02CCDE1CB3AA970054DD42 /* EventCell.swift */,
+				8C8CC4C11CC23818008AA3F7 /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				8C050A061CB32EB000BF88CF /* ViewController.swift */,
+				8C8CC4BF1CC22620008AA3F7 /* EventDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -283,7 +289,9 @@
 				8C050A071CB32EB000BF88CF /* ViewController.swift in Sources */,
 				8C02CCE11CB3BF060054DD42 /* constants.swift in Sources */,
 				8C02CCE31CB3C5B10054DD42 /* Event.swift in Sources */,
+				8C8CC4C01CC22620008AA3F7 /* EventDetailsVC.swift in Sources */,
 				8C050A051CB32EB000BF88CF /* AppDelegate.swift in Sources */,
+				8C8CC4C21CC23818008AA3F7 /* MaterialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

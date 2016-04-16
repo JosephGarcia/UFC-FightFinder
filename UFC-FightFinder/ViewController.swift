@@ -76,6 +76,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSizeMake(450, 230)
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let upcomingEvent: Event
+        
+        upcomingEvent = ufcEvents[indexPath.row]
+        
+        performSegueWithIdentifier(SHOW_DETAILS, sender: upcomingEvent)
+    }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("EventCell", forIndexPath: indexPath) as? EventCell {
             
@@ -97,6 +105,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SHOW_DETAILS {
+            if let detailsVC = segue.destinationViewController as? EventDetailsVC {
+                if let fightNight = sender as? Event {
+                    detailsVC.event = fightNight
+                }
+            }
+        }
     }
 
 
