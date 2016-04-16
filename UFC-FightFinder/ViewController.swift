@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Foundation
+import SwiftDate
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -36,6 +37,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let result = response.result
             if let events = result.value as? [Dictionary<String,AnyObject>] {
                 for event in events {
+                    let actualDate = event["event_date"] as! String
+                    let fightDate = actualDate.toDate(DateFormat.ISO8601) as NSDate!
+                    print(fightDate)
                     // NEED TO EXTRACT CITY NAME AND APPEND TO FIGHT NIGHT
                     let location = String(event["location"]!) //  "Miami, Florida"
                     let cityState = location.componentsSeparatedByString(",") // ["Miami", "Florida"]

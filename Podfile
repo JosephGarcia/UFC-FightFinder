@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'UFC-FightFinder' do
 pod 'Alamofire', '~> 3.2.1'
+pod 'SwiftDate', '~> 3.0'
 end
 

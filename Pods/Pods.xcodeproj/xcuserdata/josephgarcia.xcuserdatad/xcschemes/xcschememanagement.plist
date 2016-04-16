@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftDate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5C488F84FDE809B2EDBEA3E6C6A21AE4</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>E6F36EF6303B7581EE4F8FDCD8C1395C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F907B198F6577D17D47205BC7271B673</key>
 		<dict>
 			<key>primary</key>
 			<true/>
