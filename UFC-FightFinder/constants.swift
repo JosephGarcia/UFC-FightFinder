@@ -9,6 +9,7 @@
 import Foundation
 
 // DATA ENDPOINTS
+let UFC_BASE_URL = "http://ufc-data-api.ufc.com/api"
 let UFC_EVENTS_URL = "http://ufc-data-api.ufc.com/api/v1/us/events"
 
 //SEGUES

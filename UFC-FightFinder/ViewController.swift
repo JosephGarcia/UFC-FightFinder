@@ -22,7 +22,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
         collection.delegate = self
         collection.dataSource = self
-        
         self.grabAllEvents()
         
     }
@@ -54,8 +53,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         let imageUrl = String(event["feature_image"]!)
                         let eventId = event["id"]!.integerValue
                         let headliner = String(event["title_tag_line"]!)
+                        let description = String(event["short_description"]!)
+                        let provider = String(event["subtitle"]!)
                         
-                        let ufcEvent = Event(name: eventName, eventId: eventId, headliner: headliner, url: imageUrl)
+                        let ufcEvent = Event(name: eventName, eventId: eventId, headliner: headliner, url: imageUrl, description: description, provider: provider)
                         self.storeEvents(ufcEvent)
                     }
                 }

@@ -11,6 +11,7 @@
         </mutableArray>
         <mutableArray key="NotoSans-BoldItalic.ttf">
             <string>NotoSans-BoldItalic</string>
+            <string>NotoSans-BoldItalic</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
             <string>NotoSans</string>
@@ -204,19 +205,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qI-as-NQB" customClass="MaterialView" customModule="UFC_FightFinder" customModuleProvider="target">
                                 <rect key="frame" x="160" y="84" width="420" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light heavyweight contenders Glover Teixeira and Rashad Evans headline the main event at UFC Fight Night in Tampa, Florida." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOf-nu-03S">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light heavyweight contenders Glover Teixeira and Rashad Evans headline the main event at UFC Fight Night in Tampa, Florida." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOf-nu-03S">
                                         <rect key="frame" x="12" y="8" width="395" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="AlH-Ex-c5J"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Live on FOX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFK-tZ-gNe">
                                         <rect key="frame" x="320" y="91" width="87" height="29"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -233,27 +234,86 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fightnight" translatesAutoresizingMaskIntoConstraints="NO" id="6es-tC-HIf">
                                 <rect key="frame" x="20" y="85" width="117" height="127"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="MGA-Wh-rcO"/>
                                     <constraint firstAttribute="width" constant="117" id="nir-ir-HgI"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9r-RD-FWc">
+                                <rect key="frame" x="20" y="324" width="145" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5d-sQ-Ybv">
+                                <rect key="frame" x="20" y="265" width="110" height="3"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="Bg1-zv-dWh"/>
+                                    <constraint firstAttribute="width" constant="110" id="NW6-Gq-ium"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fo-O6-Ht1">
+                                <rect key="frame" x="470" y="265" width="110" height="3"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="lcb-TQ-MR4"/>
+                                    <constraint firstAttribute="height" constant="3" id="pCM-Ey-SZH"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yOP-rf-J9s">
+                                <rect key="frame" x="20" y="301" width="560" height="299"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="boutCell" id="G3a-vF-owC" customClass="BoutCell" customModule="UFC_FightFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G3a-vF-owC" id="PWZ-Wf-wX0">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIGHT CARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ia2-Eu-wm1">
+                                <rect key="frame" x="143" y="233" width="314" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="WU3-U9-mux"/>
+                                    <constraint firstAttribute="height" constant="60" id="gXR-kZ-bda"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="29"/>
+                                <color key="textColor" red="0.82745098039215681" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="5fo-O6-Ht1" firstAttribute="leading" secondItem="Ia2-Eu-wm1" secondAttribute="trailing" constant="13" id="1BK-ut-8Cv"/>
                             <constraint firstItem="5qI-as-NQB" firstAttribute="top" secondItem="FAd-n2-2PT" secondAttribute="bottom" constant="33" id="4jz-mK-nSl"/>
                             <constraint firstItem="FAd-n2-2PT" firstAttribute="leading" secondItem="bK3-bd-KNY" secondAttribute="leadingMargin" constant="-20" id="68j-7W-qsX"/>
+                            <constraint firstItem="R5d-sQ-Ybv" firstAttribute="top" secondItem="6es-tC-HIf" secondAttribute="bottom" constant="53" id="7Jf-Yp-W8H"/>
                             <constraint firstItem="6es-tC-HIf" firstAttribute="top" secondItem="FAd-n2-2PT" secondAttribute="bottom" constant="34" id="9lG-FV-lHB"/>
                             <constraint firstItem="5qI-as-NQB" firstAttribute="trailing" secondItem="bK3-bd-KNY" secondAttribute="trailingMargin" id="B7O-vI-w11"/>
+                            <constraint firstItem="Ia2-Eu-wm1" firstAttribute="leading" secondItem="R5d-sQ-Ybv" secondAttribute="trailing" constant="13" id="Brt-aF-QoW"/>
                             <constraint firstItem="5qI-as-NQB" firstAttribute="leading" secondItem="6es-tC-HIf" secondAttribute="trailing" constant="23" id="ELO-6Y-2Yr"/>
+                            <constraint firstItem="Ia2-Eu-wm1" firstAttribute="top" secondItem="5qI-as-NQB" secondAttribute="bottom" constant="21" id="Kaf-pg-P0G"/>
+                            <constraint firstItem="5fo-O6-Ht1" firstAttribute="trailing" secondItem="bK3-bd-KNY" secondAttribute="trailingMargin" id="SLh-BB-Tej"/>
                             <constraint firstItem="5qI-as-NQB" firstAttribute="leading" secondItem="6es-tC-HIf" secondAttribute="trailing" constant="23" id="Sxd-we-q4e"/>
+                            <constraint firstItem="5fo-O6-Ht1" firstAttribute="top" secondItem="5qI-as-NQB" secondAttribute="bottom" constant="53" id="Ure-Yl-qM4"/>
+                            <constraint firstItem="R5d-sQ-Ybv" firstAttribute="leading" secondItem="bK3-bd-KNY" secondAttribute="leadingMargin" id="W7S-xt-NjR"/>
+                            <constraint firstItem="yOP-rf-J9s" firstAttribute="top" secondItem="Ia2-Eu-wm1" secondAttribute="bottom" constant="8" id="XTf-H4-VAO"/>
+                            <constraint firstItem="yOP-rf-J9s" firstAttribute="leading" secondItem="bK3-bd-KNY" secondAttribute="leadingMargin" id="d1z-zO-hbx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FAd-n2-2PT" secondAttribute="trailing" constant="-20" id="ify-Vp-gq1"/>
+                            <constraint firstItem="yOP-rf-J9s" firstAttribute="trailing" secondItem="bK3-bd-KNY" secondAttribute="trailingMargin" id="lqe-kB-ZIZ"/>
                             <constraint firstItem="FAd-n2-2PT" firstAttribute="top" secondItem="bK3-bd-KNY" secondAttribute="topMargin" id="n9F-2s-U6J"/>
                             <constraint firstItem="6es-tC-HIf" firstAttribute="leading" secondItem="bK3-bd-KNY" secondAttribute="leadingMargin" id="pld-Xn-MI2"/>
+                            <constraint firstItem="SBh-tI-pU9" firstAttribute="top" secondItem="yOP-rf-J9s" secondAttribute="bottom" id="rq9-iW-Fvq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="eventDescription" destination="VOf-nu-03S" id="xf6-e2-TVy"/>
                         <outlet property="eventHeadliner" destination="lgZ-U1-74G" id="Aud-lW-ENb"/>
+                        <outlet property="eventImage" destination="6es-tC-HIf" id="1SS-ej-OBR"/>
+                        <outlet property="provider" destination="nFK-tZ-gNe" id="Q4C-DI-cmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03w-zr-Frf" userLabel="First Responder" sceneMemberID="firstResponder"/>

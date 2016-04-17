@@ -1,3 +1,4 @@
+
 //
 //  EventDetailsVC.swift
 //  UFC-FightFinder
@@ -7,10 +8,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class EventDetailsVC: UIViewController {
 
+    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventDescription: UILabel!
     @IBOutlet weak var eventHeadliner: UILabel!
+    @IBOutlet weak var provider: UILabel!
+    
     var event: Event!
     
     @IBAction func backBarItem_clicked(sender: AnyObject) {
@@ -19,6 +25,26 @@ class EventDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Assigning Detail View Content
         eventHeadliner.text = event.headliner
+        eventDescription.text = event.titleDescription
+        provider.text = event.eventProvider
+        
+        //Setting Image
+        let posterUrl = NSURL(string: event.eventImage)
+        let data = NSData(contentsOfURL: posterUrl!)
+        eventImage.image = UIImage(data: data!)
+        
+        
+        //Getting Fightcard
+        self.getFightcard()
+    }
+    
+    func getFightcard(){
+        let fightcard_url = "\(UFC_BASE_URL)/v3/iphone/events/\(event.eventId)/fights"
+        print(fightcard_url)
+        Alamofire.request(.GET, fightcard_url).responseJSON { (response ) -> Void in
+            print(response)
+        }
     }
 }

@@ -82,11 +82,13 @@ class Event {
         return _location
     }
     
-    init(name: String, eventId: Int, headliner: String , url: String?) {
+    init(name: String, eventId: Int, headliner: String , url: String? , description: String?, provider: String?) {
         self._name = name
         self._eventId = eventId
         self._headliner = headliner
         self._eventImage = url
+        self._titleDescription = description
+        self._eventProvider = provider
     }
     
     func grabUfcEvents(completed: DownloadComplete) {
