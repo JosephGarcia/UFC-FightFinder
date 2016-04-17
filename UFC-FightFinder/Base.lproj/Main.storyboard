@@ -286,47 +286,47 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7A-wc-Xp7" customClass="MaterialView" customModule="UFC_FightFinder" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="544" height="136"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m0I-fV-Ou9">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="-35" translatesAutoresizingMaskIntoConstraints="NO" id="m0I-fV-Ou9">
                                                             <rect key="frame" x="0.0" y="0.0" width="544" height="136"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PeX-tm-waW">
-                                                                    <rect key="frame" x="0.0" y="15" width="240" height="107"/>
+                                                                    <rect key="frame" x="0.0" y="15" width="261" height="107"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fightnight" translatesAutoresizingMaskIntoConstraints="NO" id="VVx-yI-p9j">
-                                                                            <rect key="frame" x="83" y="0.0" width="75" height="75"/>
+                                                                            <rect key="frame" x="93" y="0.0" width="75" height="75"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="75" id="6h1-K9-CVl"/>
                                                                                 <constraint firstAttribute="width" constant="75" id="RKG-cD-Vf6"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anthony Pettis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRB-q6-pkn">
-                                                                            <rect key="frame" x="62" y="83" width="117" height="24"/>
-                                                                            <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anthony Pettis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRB-q6-pkn">
+                                                                            <rect key="frame" x="72" y="83" width="117" height="24"/>
+                                                                            <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ej-rG-Dc9">
-                                                                    <rect key="frame" x="240" y="55" width="58" height="27"/>
+                                                                    <rect key="frame" x="261" y="55" width="62" height="27"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                     <color key="textColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wHf-3a-zEc">
-                                                                    <rect key="frame" x="298" y="15" width="246" height="107"/>
+                                                                    <rect key="frame" x="323" y="17" width="221" height="103"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fightnight" translatesAutoresizingMaskIntoConstraints="NO" id="aGq-zG-VFb">
-                                                                            <rect key="frame" x="85" y="0.0" width="75" height="75"/>
+                                                                            <rect key="frame" x="73" y="0.0" width="75" height="75"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="75" id="27y-Dy-ST0"/>
                                                                                 <constraint firstAttribute="height" constant="75" id="qWj-3D-cuu"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edson Barboza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nan-kK-Hh4">
-                                                                            <rect key="frame" x="63" y="83" width="120" height="24"/>
-                                                                            <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edson Barboza" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nan-kK-Hh4">
+                                                                            <rect key="frame" x="61" y="83" width="99" height="20"/>
+                                                                            <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -351,6 +351,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="fighter1Img" destination="VVx-yI-p9j" id="gEf-Q2-9pM"/>
+                                            <outlet property="fighter1Name" destination="BRB-q6-pkn" id="otq-QZ-3tp"/>
+                                            <outlet property="fighter2Img" destination="aGq-zG-VFb" id="IGL-7y-m4f"/>
+                                            <outlet property="fighter2Name" destination="Nan-kK-Hh4" id="W2x-W1-dII"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

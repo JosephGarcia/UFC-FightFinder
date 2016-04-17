@@ -20,6 +20,9 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var event: Event!
     
+    var fightCard = [Bout]()
+    
+    
     @IBAction func backBarItem_clicked(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -48,7 +51,25 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let fightcard_url = "\(UFC_BASE_URL)/v3/iphone/events/\(event.eventId)/fights"
         print(fightcard_url)
         Alamofire.request(.GET, fightcard_url).responseJSON { (response ) -> Void in
-            print(response)
+            let result = response.result
+            if let bouts = result.value as? [Dictionary<String, AnyObject>] {
+                for bout in bouts {
+                    // FIGHTER 1 DATA
+                    let fighter1Image = bout["fighter1_profile_image"] as! String
+                    let fighter1FirstName = bout["fighter1_first_name"] as! String
+                    let fighter1LastName = bout["fighter1_last_name"] as! String
+                    let fighter1FullName = "\(fighter1FirstName) \(fighter1LastName)"
+                    // FIGHTER 2 DATA
+                    let fighter2Image = bout["fighter2_profile_image"] as! String
+                    let fighter2FirstName = bout["fighter2_first_name"] as! String
+                    let fighter2LastName = bout["fighter2_last_name"] as! String
+                    let fighter2FullName = "\(fighter2FirstName) \(fighter2LastName)"
+                    
+                    let bout = Bout(fighter1: fighter1FullName, fighter1Img: fighter1Image, fighter2: fighter2FullName, fighter2Img: fighter2Image)
+                    self.fightCard.append(bout)
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
     
@@ -56,11 +77,16 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("boutCell", forIndexPath: indexPath) as! BoutCell
         
+        let bout: Bout
+        
+        bout = fightCard[indexPath.row]
+        
+        cell.configureCell(bout)
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return fightCard.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
