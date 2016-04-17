@@ -10,8 +10,9 @@
 import UIKit
 import Alamofire
 
-class EventDetailsVC: UIViewController {
+class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventDescription: UILabel!
     @IBOutlet weak var eventHeadliner: UILabel!
@@ -30,11 +31,14 @@ class EventDetailsVC: UIViewController {
         eventDescription.text = event.titleDescription
         provider.text = event.eventProvider
         
+        //Setting up Tableview
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         //Setting Image
         let posterUrl = NSURL(string: event.eventImage)
         let data = NSData(contentsOfURL: posterUrl!)
         eventImage.image = UIImage(data: data!)
-        
         
         //Getting Fightcard
         self.getFightcard()
@@ -46,5 +50,24 @@ class EventDetailsVC: UIViewController {
         Alamofire.request(.GET, fightcard_url).responseJSON { (response ) -> Void in
             print(response)
         }
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("boutCell", forIndexPath: indexPath) as! BoutCell
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
 }
