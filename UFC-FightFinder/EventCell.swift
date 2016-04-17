@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EventCell: UICollectionViewCell {
     let SHADOW_COLOR: CGFloat = 157.0 / 255.0
@@ -35,9 +36,8 @@ class EventCell: UICollectionViewCell {
         eventName.text = self.event.name
         if self.event.eventImage != "" {
             let posterUrl =  NSURL(string: self.event.eventImage)
-            let data = NSData(contentsOfURL: posterUrl!)
             eventImg.contentMode = .ScaleAspectFit
-            eventImg.image = UIImage(data: (data!))
+            eventImg.kf_setImageWithURL(posterUrl!, placeholderImage: nil, optionsInfo: [.ForceRefresh])
         } else {
             eventImg.image = UIImage(named: "fightnight")
         }

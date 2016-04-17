@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F05AC4077018C703636FAAAD'
-               BlueprintName = 'Pods-UFC-FightFinder'
+               BlueprintIdentifier = 'EA0899A11D3CD3746BEDA61C'
+               BlueprintName = 'Kingfisher'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_UFC_FightFinder.framework'>
+               BuildableName = 'Kingfisher.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

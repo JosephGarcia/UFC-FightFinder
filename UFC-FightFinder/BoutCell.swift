@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BoutCell: UITableViewCell {
     
@@ -25,11 +26,16 @@ class BoutCell: UITableViewCell {
         fighter2Name.text = bout.fighter2Name
         
         let fighter1URL = NSURL(string: bout.fighter1Img)
-        let fighter1Data = NSData(contentsOfURL: fighter1URL!)
-        fighter1Img.image = UIImage(data: fighter1Data!)
+        let task1 = fighter1Img.kf_setImageWithURL(fighter1URL!, placeholderImage: nil, optionsInfo: [.ForceRefresh])
+        if task1.downloadTask?.URL != fighter1URL {
+            task1.cancel()
+        }
         
         let fighter2URL = NSURL(string: bout.fighter2Img)
-        let fighter2Data = NSData(contentsOfURL: fighter2URL!)
-        fighter2Img.image = UIImage(data: fighter2Data!)
+        let task2 = fighter2Img.kf_setImageWithURL(fighter2URL!, placeholderImage: nil, optionsInfo: [.ForceRefresh])
+        if task2.downloadTask?.URL != fighter2URL {
+            task2.cancel()
+        }
+        
     }
 }
