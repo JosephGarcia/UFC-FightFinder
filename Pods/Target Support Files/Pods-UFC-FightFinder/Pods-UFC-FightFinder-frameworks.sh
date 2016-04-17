@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-UFC-FightFinder/Alamofire.framework"
+  install_framework "Pods-UFC-FightFinder/DZNEmptyDataSet.framework"
   install_framework "Pods-UFC-FightFinder/Kingfisher.framework"
   install_framework "Pods-UFC-FightFinder/SwiftDate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-UFC-FightFinder/Alamofire.framework"
+  install_framework "Pods-UFC-FightFinder/DZNEmptyDataSet.framework"
   install_framework "Pods-UFC-FightFinder/Kingfisher.framework"
   install_framework "Pods-UFC-FightFinder/SwiftDate.framework"
 fi

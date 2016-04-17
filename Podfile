@@ -7,5 +7,6 @@ target 'UFC-FightFinder' do
 pod 'Alamofire', '~> 3.2.1'
 pod 'SwiftDate', '~> 3.0'
 pod 'Kingfisher', '2.1.0'
+pod 'DZNEmptyDataSet', '~> 1.7'
 end
 
