@@ -15,4 +15,4 @@ let UFC_FIGHTER_URL = "http://ufc-data-api.ufc.com/api/v1/us/fighters"
 
 //SEGUES
 let SHOW_DETAILS = "showDetails"
-typealias DownloadComplete = () -> ()
+let TALE_OF_THE_TAPE = "taleOfTheTape"

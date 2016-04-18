@@ -11,6 +11,7 @@
 		8C02CCDF1CB3AA970054DD42 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02CCDE1CB3AA970054DD42 /* EventCell.swift */; };
 		8C02CCE11CB3BF060054DD42 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02CCE01CB3BF060054DD42 /* constants.swift */; };
 		8C02CCE31CB3C5B10054DD42 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02CCE21CB3C5B10054DD42 /* Event.swift */; };
+		8C042FEA1CC56DA30063A05B /* TaleOfTheTapeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C042FE91CC56DA30063A05B /* TaleOfTheTapeVC.swift */; };
 		8C050A051CB32EB000BF88CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C050A041CB32EB000BF88CF /* AppDelegate.swift */; };
 		8C050A071CB32EB000BF88CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C050A061CB32EB000BF88CF /* ViewController.swift */; };
 		8C050A0A1CB32EB000BF88CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C050A081CB32EB000BF88CF /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		8C02CCDE1CB3AA970054DD42 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		8C02CCE01CB3BF060054DD42 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		8C02CCE21CB3C5B10054DD42 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8C042FE91CC56DA30063A05B /* TaleOfTheTapeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaleOfTheTapeVC.swift; sourceTree = "<group>"; };
 		8C050A011CB32EB000BF88CF /* UFC-FightFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UFC-FightFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C050A041CB32EB000BF88CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C050A061CB32EB000BF88CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				8C050A061CB32EB000BF88CF /* ViewController.swift */,
 				8C8CC4BF1CC22620008AA3F7 /* EventDetailsVC.swift */,
+				8C042FE91CC56DA30063A05B /* TaleOfTheTapeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				8C02CCE11CB3BF060054DD42 /* constants.swift in Sources */,
 				8C02CCE31CB3C5B10054DD42 /* Event.swift in Sources */,
 				8C8CC4C01CC22620008AA3F7 /* EventDetailsVC.swift in Sources */,
+				8C042FEA1CC56DA30063A05B /* TaleOfTheTapeVC.swift in Sources */,
 				8C050A051CB32EB000BF88CF /* AppDelegate.swift in Sources */,
 				8C8CC4C21CC23818008AA3F7 /* MaterialView.swift in Sources */,
 			);

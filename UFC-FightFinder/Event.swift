@@ -91,12 +91,4 @@ class Event {
         self._eventProvider = provider
     }
     
-    func grabUfcEvents(completed: DownloadComplete) {
-        let url = NSURL(string: UFC_EVENTS_URL)!
-        Alamofire.request(.GET, url).responseJSON { (response) -> Void in
-            print(response)
-            completed()
-        }
-    }
-    
 }
