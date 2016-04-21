@@ -8,11 +8,25 @@
     <customFonts key="customFonts">
         <mutableArray key="NotoSans-Bold.ttf">
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-BoldItalic.ttf">
             <string>NotoSans-BoldItalic</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -255,7 +269,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="boutCell" rowHeight="152" id="G3a-vF-owC" customClass="BoutCell" customModule="UFC_FightFinder" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="boutCell" rowHeight="152" id="G3a-vF-owC" customClass="BoutCell" customModule="UFC_FightFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G3a-vF-owC" id="PWZ-Wf-wX0">
@@ -389,8 +403,198 @@
                     <view key="view" contentMode="scaleToFill" id="4DX-b7-pl0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TALE OF THE TAPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAW-r0-W8Z">
+                                <rect key="frame" x="193" y="20" width="214" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JGd-ie-GeL"/>
+                                    <constraint firstAttribute="width" constant="214" id="foc-Fq-ITJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="22"/>
+                                <color key="textColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="1qC-Zx-v35">
+                                <rect key="frame" x="0.0" y="75" width="600" height="505"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QB2-zP-1aK" userLabel="Fighter1">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="371"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="jones_full_body" translatesAutoresizingMaskIntoConstraints="NO" id="jM5-CG-9YX">
+                                                <rect key="frame" x="23" y="0.0" width="140" height="320"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="320" id="ED7-ZF-VzD"/>
+                                                    <constraint firstAttribute="width" constant="140" id="RxC-rk-BzH"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="r8w-O5-vtW">
+                                                <rect key="frame" x="59" y="325" width="69" height="46"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upi-0B-3PO">
+                                                        <rect key="frame" x="19" y="0.0" width="30" height="22"/>
+                                                        <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="mab-7T-FtV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jon Jones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-kZ-Ax5">
+                                                        <rect key="frame" x="0.0" y="24" width="69" height="22"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gDQ-hQ-Xpl" userLabel="Stats">
+                                        <rect key="frame" x="176" y="0.0" width="254" height="87"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2ID-Qt-vgV">
+                                                <rect key="frame" x="32" y="0.0" width="191" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20-1-0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yH3-Cd-Lr8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="21"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="RECORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="vct-W3-Gz0">
+                                                        <rect key="frame" x="65" y="0.0" width="61" height="21"/>
+                                                        <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20-1-0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-zL-m27">
+                                                        <rect key="frame" x="130" y="0.0" width="61" height="21"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-Fv-fTa">
+                                                <rect key="frame" x="38" y="33" width="179" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="73" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xxo-Us-VA8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="21"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEIGHT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-Lu-MaF">
+                                                        <rect key="frame" x="61" y="0.0" width="57" height="21"/>
+                                                        <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zbf-Kt-gau">
+                                                        <rect key="frame" x="122" y="0.0" width="57" height="21"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PJ4-AJ-ca2">
+                                                <rect key="frame" x="33" y="66" width="188" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="205" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GM0-4Q-FRb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="21"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="CNL-c0-VhD">
+                                                        <rect key="frame" x="64" y="0.0" width="60" height="21"/>
+                                                        <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="205" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Nl-vW-9M5">
+                                                        <rect key="frame" x="128" y="0.0" width="60" height="21"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Sr7-tJ-My8" userLabel="Fighter2">
+                                        <rect key="frame" x="420" y="0.0" width="180" height="371"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ovince_full_body" translatesAutoresizingMaskIntoConstraints="NO" id="HwJ-Xt-zP5">
+                                                <rect key="frame" x="20" y="0.0" width="140" height="320"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="5dF-Ri-7MF"/>
+                                                    <constraint firstAttribute="height" constant="320" id="dBQ-k1-EP4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ftf-WE-9Oj">
+                                                <rect key="frame" x="56" y="325" width="69" height="46"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-Ku-ZSh">
+                                                        <rect key="frame" x="19" y="0.0" width="30" height="22"/>
+                                                        <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="BMh-yF-ABe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jon Jones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="r6u-ax-7cw">
+                                                        <rect key="frame" x="0.0" y="24" width="69" height="22"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1qC-Zx-v35" secondAttribute="trailing" id="5Nc-eU-pjo"/>
+                            <constraint firstItem="1qC-Zx-v35" firstAttribute="top" secondItem="ZAW-r0-W8Z" secondAttribute="bottom" constant="20" id="KoM-mC-LQX"/>
+                            <constraint firstItem="1qC-Zx-v35" firstAttribute="leading" secondItem="4DX-b7-pl0" secondAttribute="leading" id="QOj-lR-NkX"/>
+                            <constraint firstItem="1qC-Zx-v35" firstAttribute="leading" secondItem="4DX-b7-pl0" secondAttribute="leadingMargin" id="T3J-Jg-TlQ"/>
+                            <constraint firstItem="Uhh-1o-HTt" firstAttribute="top" secondItem="1qC-Zx-v35" secondAttribute="bottom" constant="20" id="fjD-wG-mUs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1qC-Zx-v35" secondAttribute="trailing" id="lXo-41-Qlo"/>
+                            <constraint firstItem="ZAW-r0-W8Z" firstAttribute="centerX" secondItem="4DX-b7-pl0" secondAttribute="centerX" id="s2h-ai-cae"/>
+                            <constraint firstItem="ZAW-r0-W8Z" firstAttribute="top" secondItem="3hE-fW-yYF" secondAttribute="bottom" id="sa4-ry-VGa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T3J-Jg-TlQ"/>
+                                <exclude reference="lXo-41-Qlo"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="fighter1Height" destination="Xxo-Us-VA8" id="F9s-EG-Un6"/>
+                        <outlet property="fighter1Image" destination="jM5-CG-9YX" id="Mfq-cH-h0C"/>
+                        <outlet property="fighter1Name" destination="dbk-kZ-Ax5" id="5GW-AT-sXc"/>
+                        <outlet property="fighter1Rank" destination="Upi-0B-3PO" id="dcC-Zy-BDL"/>
+                        <outlet property="fighter1Record" destination="yH3-Cd-Lr8" id="6Lj-QS-NeK"/>
+                        <outlet property="fighter1Weight" destination="GM0-4Q-FRb" id="beK-oK-MyU"/>
+                        <outlet property="fighter2Height" destination="Zbf-Kt-gau" id="sjX-x1-TSE"/>
+                        <outlet property="fighter2Image" destination="HwJ-Xt-zP5" id="s4V-Kl-bx4"/>
+                        <outlet property="fighter2Name" destination="r6u-ax-7cw" id="icd-Pi-rgH"/>
+                        <outlet property="fighter2Rank" destination="dBd-Ku-ZSh" id="ODe-No-9wA"/>
+                        <outlet property="fighter2Record" destination="xL1-zL-m27" id="OKy-Ub-h6W"/>
+                        <outlet property="fighter2Weight" destination="4Nl-vW-9M5" id="eIJ-Co-cWD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdQ-Rt-gM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -415,5 +619,7 @@
     </scenes>
     <resources>
         <image name="fightnight" width="337" height="363"/>
+        <image name="jones_full_body" width="159" height="530"/>
+        <image name="ovince_full_body" width="164" height="530"/>
     </resources>
 </document>

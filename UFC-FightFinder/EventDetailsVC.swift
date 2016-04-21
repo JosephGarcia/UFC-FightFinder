@@ -136,13 +136,19 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegueWithIdentifier(TALE_OF_THE_TAPE, sender: bout)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == TALE_OF_THE_TAPE {
+            if let detailsVC = segue.destinationViewController as? TaleOfTheTapeVC {
+                if let boutData = sender as? Bout {
+                    detailsVC.bout = boutData
+                }
+            }
+        }
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-    
-//    func backgroundColorForEmptyDataSet(scrollView: UIScrollView!) -> UIColor! {
-//        return UIColor
-//    }
     
     func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
         let stringColor = [NSForegroundColorAttributeName: UIColor.blackColor()]
