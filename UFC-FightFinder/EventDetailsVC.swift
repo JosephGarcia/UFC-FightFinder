@@ -22,6 +22,9 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     var event: Event!
     
     var fightCard = [Bout]()
+    var fighter_one = [FighterOne]()
+    var fighter_two = [FighterTwo]()
+    
     
     
     @IBAction func backBarItem_clicked(sender: AnyObject) {
@@ -57,7 +60,38 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 for bout in bouts {
                     // IN THE FUTURE HANDLE URLS WITH DIFFERENT API STRUCTURE
                     if let _ = bout["version"] as? Int {
-                        // do nothing
+//                        let fighter1_id = bout["fighter1_id"] as! Int
+//                        let fighter2_id = bout["fighter2_id"] as! Int
+//                        
+//                        Alamofire.request(.GET, UFC_FIGHTERS).responseJSON(completionHandler: { (response) -> Void in
+//                            if let fighters = response.result.value as? [Dictionary<String, AnyObject>] {
+//                                for fighter in fighters {
+//                                    let fighter_id = fighter["id"] as? Int
+//                                    
+//                                    // IF LIST OF FIGHTERS MATCHES FIGHTER 1 ID
+//                                    if fighter_id == fighter1_id {
+//                                        let firstName = fighter["first_name"] as! String
+//                                        let lastName = fighter["last_name"] as! String
+//                                        let fullName = "\(firstName) \(lastName)"
+//                                        let fighterImg = fighter["profile_image"] as? String
+//                                        
+//                                        let fighter = FighterOne(name: fullName, image: fighterImg!)
+//                                        self.fighter_one.append(fighter)
+//                                    }
+//                                    
+//                                    // IF LIST OF FIGHTERS MATCHES FIGHTER 2 ID
+//                                    if fighter_id == fighter2_id {
+//                                        let firstName = fighter["first_name"] as! String
+//                                        let lastName = fighter["last_name"] as! String
+//                                        let fullName = "\(firstName) \(lastName)"
+//                                        let fighterImg = fighter["profile_image"] as? String
+//                                        
+//                                        let fighter = FighterTwo(name: fullName, image: fighterImg!)
+//                                        self.fighter_two.append(fighter)
+//                                    }
+//                                }
+//                            }
+//                        })
                     } else {
                     // FIGHTER 1 DATA
                         let fighter1Image = bout["fighter1_profile_image"] as! String
@@ -114,12 +148,13 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("boutCell", forIndexPath: indexPath) as! BoutCell
-        
-        let bout: Bout
-        
-        bout = fightCard[indexPath.row]
-        
-        cell.configureCell(bout)
+        if fightCard.count > 1 {
+            let bout: Bout
+            
+            bout = fightCard[indexPath.row]
+            
+            cell.configureCell(bout)
+        }
         return cell
     }
     

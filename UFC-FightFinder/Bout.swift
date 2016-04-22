@@ -54,3 +54,39 @@ class Bout {
     }
 
 }
+
+class FighterOne {
+    private var _name: String!
+    private var _image: String!
+    
+    var name: String {
+        return _name
+    }
+    
+    var image: String {
+        return _image
+    }
+    
+    init(name: String, image: String) {
+        self._name = name
+        self._image = image
+    }
+}
+
+class FighterTwo {
+    private var _name: String!
+    private var _image: String!
+    
+    var name: String {
+        return _name
+    }
+    
+    var image: String {
+        return _image
+    }
+    
+    init(name: String, image: String) {
+        self._name = name
+        self._image = image
+    }
+}

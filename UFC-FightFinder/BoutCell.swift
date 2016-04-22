@@ -38,4 +38,14 @@ class BoutCell: UITableViewCell {
         }
         
     }
+    
+    func configureBoxOne(fighterOne: FighterOne) {
+        fighter1Name.text = fighterOne.name
+        fighter1Img.kf_setImageWithURL(NSURL(string: fighterOne.image)!, placeholderImage: nil)
+    }
+    
+    func configureBoxTwo(fighterTwo: FighterTwo) {
+        fighter2Name.text = fighterTwo.name
+        fighter2Img.kf_setImageWithURL(NSURL(string: fighterTwo.image)!, placeholderImage: nil)
+    }
 }
