@@ -42,8 +42,7 @@ class EventDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //Setting Image
         let posterUrl = NSURL(string: event.eventImage)
-        let data = NSData(contentsOfURL: posterUrl!)
-        eventImage.image = UIImage(data: data!)
+        eventImage.kf_setImageWithURL(posterUrl!, placeholderImage: UIImage(named: "fightnight"))
         
         //Getting Fightcard
         self.getFightcard()

@@ -31,7 +31,9 @@ class TaleOfTheTapeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //FIGHTER 1
-        fighter1Image.kf_setImageWithURL(NSURL(string:bout.fighter1BodyImage)!)
+        if let fighter1body = bout.fighter1BodyImage {
+            fighter1Image.kf_setImageWithURL(NSURL(string: fighter1body)!, placeholderImage: UIImage(named: "fighter_placeholder"))
+        }
         fighter1Record.text = bout.fighter1record
         fighter1Height.text = "\(bout.fighter1Height)"
         fighter1Weight.text = "\(bout.fighter1weight)"
@@ -39,7 +41,9 @@ class TaleOfTheTapeVC: UIViewController {
         fighter1Rank.text = "#\(bout.fighter1Rank)"
         
         //FIGHTER 2
-        fighter2Image.kf_setImageWithURL(NSURL(string: bout.fighter2BodyImage)!)
+        if let fighter2body = bout.fighter2BodyImage {
+            fighter2Image.kf_setImageWithURL(NSURL(string: fighter2body)!, placeholderImage: UIImage(named: "fighter_placeholder"))
+        }
         fighter2Record.text = bout.fighter2record
         fighter2Height.text = "\(bout.fighter2Height)"
         fighter2Weight.text = "\(bout.fighter2weight)"
